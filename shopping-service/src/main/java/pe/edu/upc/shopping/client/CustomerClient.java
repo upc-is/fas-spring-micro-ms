@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pe.edu.upc.shopping.model.Customer;
 
-@FeignClient(name = "customer-service")//, fallback = CustomerHystrixFallbackFactory.class)
-@RequestMapping(value = "/products")
+@FeignClient(name = "customer-service", fallback = CustomerHystrixFallbackFactory.class)
+//@RequestMapping(value = "/customers")
 public interface CustomerClient {
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/customers/{id}")
     public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
 }
