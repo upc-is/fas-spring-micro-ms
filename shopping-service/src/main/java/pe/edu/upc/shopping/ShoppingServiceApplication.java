@@ -13,9 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 @EnableHystrixDashboard
 public class ShoppingServiceApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ShoppingServiceApplication.class, args);
 	}
-
 }
